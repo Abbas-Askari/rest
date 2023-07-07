@@ -1,0 +1,54 @@
+body {
+  height: 100vh;
+  background-color: antiquewhite;
+  margin: 0;
+  padding: 0;
+}
+
+#content {
+  height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+}
+
+#header {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px 0 0 0;
+  background-color: lightyellow;
+  grid-row: 1/2;
+}
+
+#header button {
+  font-size: 18px;
+}
+
+#footer {
+  grid-row: 3/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  background-color: lightyellow;
+}
+
+#git-hub-link {
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+#git-hub-link p {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  fill: blue;
+  width: 30px;
+  height: 30px;
+}

@@ -5,6 +5,11 @@ body {
   padding: 0;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
 #content {
   height: 100%;
   display: grid;
@@ -15,13 +20,30 @@ body {
   display: flex;
   justify-content: center;
   gap: 16px;
-  padding: 16px 0 0 0;
-  background-color: lightyellow;
+  /* padding: 16px 0 0 0; */
+  background-color: #ffde73;
   grid-row: 1/2;
 }
 
 #header button {
   font-size: 18px;
+  padding: 12px 24px;
+  background-color: inherit;
+  border: none;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  position: relative;
+}
+
+#header button[data-clicked="true"]::after {
+  content: "";
+  width: 100%;
+  bottom: -5px;
+  height: 5px;
+  position: absolute;
+  left: 0;
+  background-color: black;
 }
 
 #footer {
@@ -30,7 +52,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 12px;
-  background-color: lightyellow;
+  background-color: #ffde73;
 }
 
 #git-hub-link {
@@ -51,4 +73,142 @@ img {
   fill: blue;
   width: 30px;
   height: 30px;
+}
+
+#hours {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: 200px; */
+  /* margin: 0 auto; */
+}
+
+#header-hours {
+  /* align-self: center; */
+  /* width: 300px; */
+}
+
+.main-content {
+  padding: 64px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  width: 80%;
+  gap: 64px;
+
+  background-color: #ffde73;
+  font-size: 22px;
+  margin: 64px 0;
+  border-radius: 32px;
+}
+
+/* .main-content > * {
+  width: 420px;
+  border: 1px solid black;
+} */
+
+#heading > h1 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.main-content {
+  /* position: relative; */
+}
+
+.box {
+  position: relative;
+  background-color: #ffc60b;
+  padding: 20px;
+  clip-path: polygon(
+    0 20%,
+    10% 0,
+    90% 0,
+    100% 20%,
+    100% 80%,
+    90% 100%,
+    10% 100%,
+    0 80%
+  );
+}
+
+.box-wrapper {
+  width: 530px;
+  padding: 12px;
+  background-color: #c16a08;
+  clip-path: polygon(
+    0 21%,
+    11% 0,
+    89% 0,
+    100% 21%,
+    100% 79%,
+    89% 100%,
+    11% 100%,
+    0 79%
+  );
+}
+
+.box-wrapper:first-child {
+  width: 600px;
+  /* height: 80px;
+  padding: 0;
+  position: relative; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.box-wrapper:first-child .box {
+  text-align: justify;
+  /* vertical-align: middle;
+  position: absolute;
+  width: calc(100% - 24px);
+  height: calc(100% - 24px);
+  top: 12px;
+  left: 12px;
+  box-sizing: border-box; */
+}
+
+.to-left {
+  align-self: start;
+  position: relative;
+  left: 45px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.food {
+  box-sizing: border-box;
+}
+
+.food > p {
+  padding: 0;
+  margin: 10px 0;
+  padding-left: 64px;
+}
+
+.food > div {
+  padding: 0;
+  margin: 16px 0;
+  padding-left: 64px;
+}
+
+.food > img {
+  margin-left: auto;
+  margin-right: 32px;
+  display: block;
+  border: 1px solid #c16a08;
+  fill: none;
+  width: 100px;
+  height: 100px;
+}
+
+.box-wrapper:has(> .sub-heading) {
+  width: max-content;
+}
+
+.sub-heading h3 {
+  margin: 0;
 }

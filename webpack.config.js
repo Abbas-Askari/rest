@@ -11,6 +11,7 @@ module.exports = {
     contact: "./src/contact.js",
     app: "./src/app.js",
   },
+  devtool: "inline-source-map",
   plugins: [
     new HtmlWebpackPlugin({
       title: "Output Management",

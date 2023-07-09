@@ -6,8 +6,11 @@ import menuF from "./menu";
 
 const div = document.createElement("div");
 const home = homeF();
+home.classList.add("main-content");
 const menu = menuF();
+menu.classList.add("main-content");
 const contact = contactF();
+contact.classList.add("main-content");
 
 function clean() {
   div.removeChild(div.childNodes[1]);
